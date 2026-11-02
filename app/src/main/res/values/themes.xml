@@ -1,0 +1,8 @@
+<resources>
+    <style name="Theme.Somnia" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/somnia_night</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+    <color name="somnia_night">#FF080B1A</color>
+</resources>
