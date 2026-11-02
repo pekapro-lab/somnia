@@ -20,8 +20,6 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - uses: android-actions/setup-android@v3
-
       - name: Decode release keystore
         env:
           KS_B64: ${{ secrets.PEKAR_KEYSTORE_BASE64 }}
