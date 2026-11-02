@@ -51,7 +51,7 @@ jobs:
         run: |
           VERSION="${GITHUB_REF_NAME#v}"
           if [ "$GITHUB_REF_TYPE" != "tag" ]; then VERSION="dev"; fi
-          OUT="Somnia-Binaural-${VERSION}.apk"
+          OUT="PK-Sueno-Binaural-${VERSION}.apk"
           cp app/build/outputs/apk/release/app-release.apk "$OUT"
           echo "apk=$OUT" >> "$GITHUB_OUTPUT"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
@@ -59,7 +59,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: Somnia-Binaural-apk
+          name: PK-Sueno-Binaural-apk
           path: |
             ${{ steps.prep.outputs.apk }}
             ${{ steps.prep.outputs.apk }}.sha256
@@ -73,7 +73,7 @@ jobs:
           VER="${{ steps.prep.outputs.version }}"
           SUM=$(cut -d' ' -f1 "$APK.sha256")
           if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then gh release upload "$GITHUB_REF_NAME" "$APK" --clobber; exit 0; fi
-          gh release create "$GITHUB_REF_NAME" "$APK" --title "Somnia Binaural $VER" --notes "APK de Android de **Somnia Binaural**: tonos binaurales y sonidos de la naturaleza, sin conexión. Hecho con Grok.
+          gh release create "$GITHUB_REF_NAME" "$APK" --title "PK Sueño Binaural $VER" --notes "APK de Android de **PK Sueño Binaural**: tonos binaurales y sonidos de la naturaleza, sin conexión. Hecho con Grok.
 
           - Paquete: \`com.pekapro.somnia\`
           - Android 7 (API 24) o superior

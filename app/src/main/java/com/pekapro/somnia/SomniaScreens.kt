@@ -163,9 +163,9 @@ fun SomniaBinauralScreen(viewModel: BinauralViewModel = viewModel()) {
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Column {
-                            Text("Somnia Binaural", style = MaterialTheme.typography.headlineMedium, color = StarlightWhite, fontWeight = FontWeight.Bold)
+                            Text("PK Sueño Binaural", style = MaterialTheme.typography.headlineMedium, color = StarlightWhite, fontWeight = FontWeight.Bold)
                             Text("Sintonización Cerebral & Naturaleza", style = MaterialTheme.typography.bodySmall, color = LuminousGold)
-                            Text("Hecho con Grok", style = MaterialTheme.typography.labelSmall, color = MoonbeamSilver.copy(alpha = 0.7f))
+                            Text("Hecho por Pekapro · Hecho con Grok", style = MaterialTheme.typography.labelSmall, color = MoonbeamSilver.copy(alpha = 0.7f))
                         }
                         Surface(
                             color = ElevatedNightCard,
@@ -702,7 +702,7 @@ fun ScienceSection() {
             }
         }
         Text(
-            "Hecho con Grok",
+            "Hecho por Pekapro · Hecho con Grok",
             style = MaterialTheme.typography.labelSmall,
             color = MoonbeamSilver.copy(alpha = 0.7f),
             modifier = Modifier.fillMaxWidth().padding(top = 8.dp),

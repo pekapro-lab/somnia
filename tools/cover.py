@@ -1,4 +1,4 @@
-# Genera assets/cover.png (1200x630) para la ficha del Estudio.
+# Genera assets/cover-pk-sueno.png (1200x630) para la ficha del Estudio.
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import math, random
 W,H=1200,630
@@ -23,7 +23,7 @@ for i,(col,amp,base) in enumerate([((49,46,129),18,470),((30,27,75),22,520),((16
     else: d.line(pts,fill=col,width=4)
 d.line([(x,500+12*math.sin(x/55+0.5)) for x in range(0,W+10,8)],fill=(244,196,100),width=3)
 fb='/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'; fr='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
-d.text((80,200),"Somnia Binaural",font=ImageFont.truetype(fb,80),fill=(248,250,252))
+d.text((80,200),"PK Sueño Binaural",font=ImageFont.truetype(fb,80),fill=(248,250,252))
 d.text((84,305),"Tonos binaurales y sonidos de la naturaleza",font=ImageFont.truetype(fr,32),fill=(244,196,100))
-d.text((84,580),"Hecho con Grok",font=ImageFont.truetype(fr,24),fill=(203,213,225))
-img.save('assets/cover.png')
+d.text((84,580),"Hecho por Pekapro · Hecho con Grok",font=ImageFont.truetype(fr,24),fill=(203,213,225))
+img.save('assets/cover-pk-sueno.png')

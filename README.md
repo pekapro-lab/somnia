@@ -1,8 +1,10 @@
-# Somnia Binaural
+# PK Sueño Binaural
+
+*(Antes llamada Somnia Binaural.)*
 
 App de Android (Kotlin + Jetpack Compose) que genera **tonos binaurales** en tiempo real y los mezcla con **sonidos de la naturaleza** sintetizados (lluvia, olas, viento, grillos, arroyo y hoguera). Sin archivos de audio, sin internet y sin APIs de pago.
 
-![Portada](assets/cover.png)
+![Portada](assets/cover-pk-sueno.png)
 
 ## Qué tiene
 - 5 modos (Descanso Sereno, Siesta Revitalizante, Sueño Profundo, Sueño Reparador y Paz Crepuscular).
@@ -25,4 +27,4 @@ Descarga la APK desde [Releases](https://github.com/pekapro-lab/somnia/releases/
 La firma usa la clave Pekapro desde secretos de GitHub Actions (CI) o un `keystore.properties` local fuera del repositorio. Nunca se suben claves ni contraseñas.
 
 ## Licencia
-AGPL-3.0. Hecho con Grok · Pekapro.
+AGPL-3.0. Hecho por Pekapro · Hecho con Grok.

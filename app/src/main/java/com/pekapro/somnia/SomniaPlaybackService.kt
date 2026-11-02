@@ -167,8 +167,8 @@ class SomniaPlaybackService : Service() {
 
     private fun createChannel() {
         if (Build.VERSION.SDK_INT >= 26) {
-            val ch = NotificationChannel(CHANNEL_ID, "Reproducción", NotificationManager.IMPORTANCE_LOW).apply {
-                description = "Controles de la sesión binaural y tiempo restante"
+            val ch = NotificationChannel(CHANNEL_ID, "PK Sueño Binaural · Reproducción", NotificationManager.IMPORTANCE_LOW).apply {
+                description = "Controles de PK Sueño Binaural y tiempo restante"
                 setShowBadge(false)
             }
             getSystemService(NotificationManager::class.java).createNotificationChannel(ch)
@@ -193,7 +193,7 @@ class SomniaPlaybackService : Service() {
             .setSmallIcon(R.drawable.ic_stat_moon)
             .setContentTitle(s.selectedMode.nameEs)
             .setContentText(status)
-            .setSubText("${String.format(java.util.Locale.US, "%.1f", s.beatHz)} Hz")
+            .setSubText("PK Sueño Binaural • ${String.format(java.util.Locale.US, "%.1f", s.beatHz)} Hz")
             .setContentIntent(content)
             .setDeleteIntent(servicePending(ACTION_STOP, 3))
             .setOnlyAlertOnce(true)
@@ -263,7 +263,7 @@ class SomniaPlaybackService : Service() {
     private fun acquireWakeLock() {
         if (wakeLock?.isHeld == true) return
         val pm = getSystemService(Context.POWER_SERVICE) as PowerManager
-        wakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "Somnia:Playback").apply {
+        wakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "PKSueno:Playback").apply {
             setReferenceCounted(false)
             acquire(9L * 60 * 60 * 1000) // tope de seguridad: 9 h (el temporizador máximo es 8 h)
         }
